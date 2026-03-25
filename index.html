@@ -1,0 +1,1509 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syed Fakhir Ejaz | Full Stack Developer & CEH</title>
+    <meta
+      name="description"
+      content="Portfolio of Syed Fakhir Ejaz - Full Stack Developer, AI Enthusiast, and Certified Ethical Hacker from Azad Kashmir, Pakistan."
+    />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts: Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              primary: "#0f172a",
+              secondary: "#1e293b",
+              accent: "#10b981",
+              accentGold: "#fbbf24",
+              accentHover: "#059669",
+            },
+            animation: {
+              "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="antialiased bg-grid">
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold gradient-text tracking-tight">
+          SFE<span class="text-accent"></span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="#home"
+            class="text-gray-300 hover:text-accent transition-colors text-sm font-medium"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-gray-300 hover:text-accent transition-colors text-sm font-medium"
+            >About</a
+          >
+          <a
+            href="#certifications"
+            class="text-gray-300 hover:text-accent transition-colors text-sm font-medium"
+            >Certifications</a
+          >
+          <a
+            href="#experience"
+            class="text-gray-300 hover:text-accent transition-colors text-sm font-medium"
+            >Experience</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-300 hover:text-accent transition-colors text-sm font-medium"
+            >Projects</a
+          >
+          <a
+            href="#skills"
+            class="text-gray-300 hover:text-accent transition-colors text-sm font-medium"
+            >Skills</a
+          >
+          <a
+            href="#contact"
+            class="px-6 py-2 bg-accent text-white rounded-full font-medium hover:bg-accentHover transition-all transform hover:scale-105 shadow-lg shadow-accent/30"
+            >Contact Me</a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-2xl text-gray-300 hover:text-accent"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 w-full glass border-t border-gray-800"
+      >
+        <div class="flex flex-col p-6 space-y-4">
+          <a
+            href="#home"
+            class="text-gray-300 hover:text-accent transition-colors"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-gray-300 hover:text-accent transition-colors"
+            >About</a
+          >
+          <a
+            href="#certifications"
+            class="text-gray-300 hover:text-accent transition-colors text-sm font-medium"
+            >Certifications</a
+          >
+          <a
+            href="#experience"
+            class="text-gray-300 hover:text-accent transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-300 hover:text-accent transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#skills"
+            class="text-gray-300 hover:text-accent transition-colors"
+            >Skills</a
+          >
+          <a href="#contact" class="text-accent font-medium">Contact Me</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+    >
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute -top-40 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-slow"
+        ></div>
+        <div
+          class="absolute -bottom-40 -left-40 w-96 h-96 bg-accentGold/10 rounded-full blur-3xl animate-pulse-slow"
+          style="animation-delay: 1.5s"
+        ></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10 text-center">
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-offset="0">
+          <p
+            class="text-accent font-medium mb-4 tracking-widest uppercase text-sm"
+          >
+            Welcome to my portfolio
+          </p>
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            Hi, I'm <span class="gradient-text">Syed Fakhir Ejaz</span>
+          </h1>
+          <div class="text-xl md:text-3xl text-gray-400 mb-8 h-12">
+            <span id="typing-text" class="typing-cursor font-light"></span>
+          </div>
+          <p
+            class="text-gray-400 max-w-2xl mx-auto mb-10 text-lg leading-relaxed"
+          >
+            A passionate Computer Science student and
+            <span class="text-accentGold font-semibold"
+              >Full Stack Developer</span
+            >
+            specializing in building scalable web applications, AI-powered
+            solutions, and modern digital experiences.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <a
+              href="#projects"
+              class="px-8 py-4 bg-accent text-white rounded-full font-semibold hover:bg-accentHover transition-all transform hover:scale-105 shadow-lg shadow-accent/30 flex items-center gap-2"
+            >
+              <span>View Projects</span><i class="fas fa-arrow-right"></i>
+            </a>
+            <a
+              href="#contact"
+              class="px-8 py-4 border-2 border-accentGold text-accentGold rounded-full font-semibold hover:bg-accentGold hover:text-primary transition-all flex items-center gap-2"
+            >
+              <span>Hire Me</span><i class="fas fa-briefcase"></i>
+            </a>
+          </div>
+          <div class="mt-12 flex justify-center gap-6">
+            <a
+              href="https://github.com/Techguru72/"
+              target="_blank"
+              class="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-400 hover:text-accent transition-all transform hover:scale-110"
+              ><i class="fab fa-github text-xl"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/syed-fakhir-ejaz-44577433b"
+              target="_blank"
+              class="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-400 hover:text-accent transition-all transform hover:scale-110"
+              ><i class="fab fa-linkedin-in text-xl"></i
+            ></a>
+            <a
+              href="mailto:syedfakhirejaz@gmail.com"
+              class="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-400 hover:text-accent transition-all transform hover:scale-110"
+              ><i class="fas fa-envelope text-xl pointer-events-auto"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a
+          href="#about"
+          class="text-gray-400 hover:text-accent transition-colors"
+          ><i class="fas fa-chevron-down text-2xl"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right" data-aos-duration="800">
+            <div class="relative">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-accent to-accentGold rounded-2xl transform rotate-3 opacity-20"
+              ></div>
+              <div
+                class="relative glass rounded-2xl p-8 border border-gray-700"
+              >
+                <div class="flex items-center gap-4 mb-6">
+                  <div
+                    class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center"
+                  >
+                    <i class="fas fa-user-shield text-3xl text-accent"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold text-white">
+                      Full Stack Developer
+                    </h3>
+                    <p class="text-accentGold">
+                      Certified from AJK IT Excellence Center
+                    </p>
+                  </div>
+                </div>
+                <div class="space-y-4 text-gray-300">
+                  <div class="flex items-center gap-3">
+                    <i class="fas fa-map-marker-alt text-accent"></i
+                    ><span>Azad Kashmir, Pakistan</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <i class="fas fa-graduation-cap text-accent"></i
+                    ><span>BS Computer Science (8th Semester)</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <i class="fas fa-university text-accent"></i
+                    ><span>University of Azad Jammu and Kashmir</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="800">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+              About <span class="gradient-text">Me</span>
+            </h2>
+            <div class="space-y-4 text-gray-300 leading-relaxed">
+              <p>
+                I am a passionate Computer Science student at the University of
+                Azad Jammu and Kashmir, currently in my final semesters. I
+                specialize in full-stack web development, with hands-on
+                experience in building responsive, scalable, and user-centric
+                applications that solve real-world problems.
+              </p>
+              <p>
+                As a
+                <span class="text-accentGold font-semibold"
+                  >Full Stack Developer</span
+                >, I possess a strong understanding of both front-end and
+                back-end technologies, allowing me to design and develop
+                complete, efficient, and high-performance web solutions. I focus
+                on writing clean, maintainable code and creating seamless
+                digital experiences.
+              </p>
+              <p>
+                I am highly motivated to build innovative solutions using AI and
+                modern technologies, continuously learning, experimenting, and
+                adapting to the rapidly evolving tech landscape to stay ahead in
+                the field.
+              </p>
+              <div class="pt-4 border-t border-gray-700 mt-6">
+                <h4 class="text-accent font-semibold mb-2">Career Goal</h4>
+                <p class="italic text-gray-400">
+                  "To become a professional full-stack developer and work on
+                  impactful projects involving AI, scalable systems, and
+                  real-world problem solving."
+                </p>
+              </div>
+              <a
+                href="/portfolio/assets/SyedFakhirEjazResume (3) (1).pdf"
+                class="inline-flex items-center gap-2 mt-6 text-accent hover:text-accentGold transition-colors font-medium group"
+                ><span>Download CV</span
+                ><i
+                  class="fas fa-download group-hover:translate-y-1 transition-transform"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section
+      id="certifications"
+      class="py-20 bg-secondary/30 relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-96 h-96 bg-accentGold/5 rounded-full blur-3xl"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-medium mb-4"
+          >
+            <i class="fas fa-award"></i><span>Professional Credentials</span>
+          </div>
+          <h2 class="text-3xl md:text-5xl font-bold mb-4">
+            My <span class="gradient-text">Certifications</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Industry-recognized certifications demonstrating expertise in
+            cybersecurity, AI, web development, and leadership.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- CEH Certification -->
+          <div
+            class="cert-card glass rounded-2xl overflow-hidden border border-gray-700 group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            onclick="openModal('/portfolio/assets/4cb1a310-1.png')"
+          >
+            <div
+              class="relative h-64 overflow-hidden bg-gradient-to-br from-red-900/20 to-black"
+            >
+              <img
+                src="/portfolio/assets/4cb1a310-1.png"
+                alt="CEH Certificate"
+                class="cert-image w-full h-full object-cover object-top"
+              />
+              <div
+                class="cert-overlay absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm"
+              >
+                <div class="text-center">
+                  <i class="fas fa-search-plus text-4xl text-accent mb-2"></i>
+                  <p class="text-white font-medium">Click to View</p>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span
+                  class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-bold border border-red-500/30"
+                  ><i class="fas fa-shield-alt mr-1"></i>EC-Council</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center"
+                >
+                  <i class="fas fa-user-secret text-red-400"></i>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-bold text-white group-hover:text-accent transition-colors"
+                  >
+                    Certified Ethical Hacker
+                  </h3>
+                  <p class="text-gray-400 text-sm">EC-Council</p>
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm mb-4">
+                Professional certification in ethical hacking and penetration
+                testing. Certification #ECC7509463281
+              </p>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-700"
+              >
+                <span class="text-gray-500 text-xs"
+                  ><i class="far fa-calendar-alt mr-1"></i> Aug 2025</span
+                ><button
+                  class="text-accent hover:text-accentGold transition-colors text-sm font-medium flex items-center gap-1"
+                >
+                  Verify <i class="fas fa-external-link-alt text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google AI Fundamentals -->
+          <div
+            class="cert-card glass rounded-2xl overflow-hidden border border-gray-700 group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="150"
+            onclick="openModal('/portfolio/assets/1ce8c5e1-1.png')"
+          >
+            <div class="relative h-64 overflow-hidden bg-white">
+              <img
+                src="/portfolio/assets/1ce8c5e1-1.png"
+                alt="Google AI Certificate"
+                class="cert-image w-full h-full object-cover object-top"
+              />
+              <div
+                class="cert-overlay absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm"
+              >
+                <div class="text-center">
+                  <i class="fas fa-search-plus text-4xl text-accent mb-2"></i>
+                  <p class="text-white font-medium">Click to View</p>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span
+                  class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold border border-blue-500/30"
+                  ><i class="fab fa-google mr-1"></i>Google</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center"
+                >
+                  <i class="fas fa-brain text-blue-400"></i>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-bold text-white group-hover:text-accent transition-colors"
+                  >
+                    AI Fundamentals
+                  </h3>
+                  <p class="text-gray-400 text-sm">Google & Coursera</p>
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm mb-4">
+                Comprehensive course covering artificial intelligence basics,
+                machine learning concepts, and Google AI tools.
+              </p>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-700"
+              >
+                <span class="text-gray-500 text-xs"
+                  ><i class="far fa-calendar-alt mr-1"></i> Mar 2026</span
+                ><a
+                  href="https://coursera.org/verify/QQGTTBOPBBKJ"
+                  target="_blank"
+                  class="text-accent hover:text-accentGold transition-colors text-sm font-medium flex items-center gap-1"
+                  >Verify <i class="fas fa-external-link-alt text-xs"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Cybersecurity -->
+          <div
+            class="cert-card glass rounded-2xl overflow-hidden border border-gray-700 group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            onclick="openModal('/portfolio/assets/8f7223b4-1.png')"
+          >
+            <div class="relative h-64 overflow-hidden bg-white">
+              <img
+                src="/portfolio/assets/8f7223b4-1.png"
+                alt="Google Cybersecurity Certificate"
+                class="cert-image w-full h-full object-cover object-top"
+              />
+              <div
+                class="cert-overlay absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm"
+              >
+                <div class="text-center">
+                  <i class="fas fa-search-plus text-4xl text-accent mb-2"></i>
+                  <p class="text-white font-medium">Click to View</p>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span
+                  class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold border border-blue-500/30"
+                  ><i class="fab fa-google mr-1"></i>Google</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center"
+                >
+                  <i class="fas fa-lock text-green-400"></i>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-bold text-white group-hover:text-accent transition-colors"
+                  >
+                    Foundations of Cybersecurity
+                  </h3>
+                  <p class="text-gray-400 text-sm">Google & Coursera</p>
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm mb-4">
+                Foundational knowledge in cybersecurity, threat analysis, risk
+                management, and security frameworks.
+              </p>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-700"
+              >
+                <span class="text-gray-500 text-xs"
+                  ><i class="far fa-calendar-alt mr-1"></i> May 2025</span
+                ><a
+                  href="https://coursera.org/verify/QQZGM88SETVU"
+                  target="_blank"
+                  class="text-accent hover:text-accentGold transition-colors text-sm font-medium flex items-center gap-1"
+                  >Verify <i class="fas fa-external-link-alt text-xs"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aspire Leaders Program -->
+          <div
+            class="cert-card glass rounded-2xl overflow-hidden border border-gray-700 group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="250"
+            onclick="
+              openModal(
+                '/portfolio/assets/syed_fakhir_ejaz_alp_2025_certificate_of_completion[1] conv 1.png',
+              )
+            "
+          >
+            <div
+              class="relative h-64 overflow-hidden bg-gradient-to-br from-red-800 to-red-900"
+            >
+              <img
+                src="/portfolio/assets/syed_fakhir_ejaz_alp_2025_certificate_of_completion[1] conv 1.png"
+                alt="Aspire Leaders Certificate"
+                class="cert-image w-full h-full object-cover object-top"
+              />
+              <div
+                class="cert-overlay absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm"
+              >
+                <div class="text-center">
+                  <i class="fas fa-search-plus text-4xl text-accent mb-2"></i>
+                  <p class="text-white font-medium">Click to View</p>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span
+                  class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-bold border border-red-500/30"
+                  ><i class="fas fa-crown mr-1"></i>Harvard</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center"
+                >
+                  <i class="fas fa-users text-red-400"></i>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-bold text-white group-hover:text-accent transition-colors"
+                  >
+                    Aspire Leaders Program 2025
+                  </h3>
+                  <p class="text-gray-400 text-sm">
+                    Aspire Institute & Harvard
+                  </p>
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm mb-4">
+                Leadership development program by Harvard Business School
+                professors. 40 hours of coursework in leadership and critical
+                thinking.
+              </p>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-700"
+              >
+                <span class="text-gray-500 text-xs"
+                  ><i class="far fa-calendar-alt mr-1"></i> Mar 2025</span
+                ><button
+                  class="text-accent hover:text-accentGold transition-colors text-sm font-medium flex items-center gap-1"
+                >
+                  View <i class="fas fa-eye text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Development Bootcamp -->
+          <div
+            class="cert-card glass rounded-2xl overflow-hidden border border-gray-700 group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            onclick="
+              openModal('/portfolio/assets/IMG_20260323_211138_HDR.jpg.jpeg')
+            "
+          >
+            <div class="relative h-64 overflow-hidden bg-gray-100">
+              <img
+                src="/portfolio/assets/IMG_20260323_211138_HDR.jpg.jpeg"
+                alt="Web Development Certificate"
+                class="cert-image w-full h-full object-cover object-top"
+              />
+              <div
+                class="cert-overlay absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm"
+              >
+                <div class="text-center">
+                  <i class="fas fa-search-plus text-4xl text-accent mb-2"></i>
+                  <p class="text-white font-medium">Click to View</p>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span
+                  class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-bold border border-green-500/30"
+                  ><i class="fas fa-code mr-1"></i>AJK IT Board</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center"
+                >
+                  <i class="fas fa-laptop-code text-green-400"></i>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-bold text-white group-hover:text-accent transition-colors"
+                  >
+                    Certificate in Web Development
+                  </h3>
+                  <p class="text-gray-400 text-sm">
+                    IT Excellence Centre Muzaffarabad
+                  </p>
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm mb-4">
+                4-month intensive bootcamp covering full-stack web development.
+                A Project by AJK IT Board & Sapphire Prudential.
+              </p>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-700"
+              >
+                <span class="text-gray-500 text-xs"
+                  ><i class="far fa-calendar-alt mr-1"></i> Nov 2025</span
+                ><span class="text-gray-500 text-xs"
+                  >Reg: AJKITEC-MZF-B2-0359</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Global AI Hackathon -->
+          <div
+            class="cert-card glass rounded-2xl overflow-hidden border border-gray-700 group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="350"
+            onclick="openModal('/portfolio/assets/ai.jpeg')"
+          >
+            <div
+              class="relative h-64 overflow-hidden bg-gradient-to-br from-red-600 to-yellow-600"
+            >
+              <img
+                src="/portfolio/assets/ai.jpeg"
+                alt="Global AI Hackathon"
+                class="cert-image w-full h-full object-cover"
+              />
+              <div
+                class="cert-overlay absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm"
+              >
+                <div class="text-center">
+                  <i class="fas fa-search-plus text-4xl text-accent mb-2"></i>
+                  <p class="text-white font-medium">Click to View</p>
+                </div>
+              </div>
+              <div class="absolute top-4 right-4">
+                <span
+                  class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-bold border border-yellow-500/30"
+                  ><i class="fas fa-rocket mr-1"></i>Hackathon</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-10 h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center"
+                >
+                  <i class="fas fa-trophy text-yellow-400"></i>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-bold text-white group-hover:text-accent transition-colors"
+                  >
+                    Global AI Hackathon 2026
+                  </h3>
+                  <p class="text-gray-400 text-sm">Aspire x Cayu</p>
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm mb-4">
+                24-hour global AI hackathon participant. Demonstrated creativity
+                and innovation in AI solution development.
+              </p>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-700"
+              >
+                <span class="text-gray-500 text-xs"
+                  ><i class="far fa-calendar-alt mr-1"></i> 2026</span
+                ><span class="text-accent text-xs font-medium"
+                  >Participant</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div
+            class="glass rounded-xl p-6 text-center border border-gray-700"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-3xl font-bold text-accent mb-1">6+</div>
+            <div class="text-gray-400 text-sm">Certifications</div>
+          </div>
+          <div
+            class="glass rounded-xl p-6 text-center border border-gray-700"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-3xl font-bold text-accentGold mb-1">3+</div>
+            <div class="text-gray-400 text-sm">Tech Giants</div>
+          </div>
+          <div
+            class="glass rounded-xl p-6 text-center border border-gray-700"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="text-3xl font-bold text-accent mb-1">200+</div>
+            <div class="text-gray-400 text-sm">Hours Learned</div>
+          </div>
+          <div
+            class="glass rounded-xl p-6 text-center border border-gray-700"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="text-3xl font-bold text-accentGold mb-1">100%</div>
+            <div class="text-gray-400 text-sm">Completion Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="modal-close">&times;</span>
+      <img id="modalImage" class="modal-content" src="" alt="Certificate" />
+    </div>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-20 bg-secondary/30">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Work <span class="gradient-text">Experience</span>
+          </h2>
+          <p class="text-gray-400">My professional journey so far</p>
+        </div>
+        <div class="max-w-3xl mx-auto">
+          <div
+            class="relative border-l-2 border-accent/30 ml-4 md:ml-0 space-y-12"
+          >
+            <!-- Experience 1 -->
+            <div
+              class="relative pl-8 md:pl-12 timeline-item"
+              data-aos="fade-right"
+            >
+              <div
+                class="glass rounded-xl p-6 border border-gray-700 hover:border-accent/50 transition-colors"
+              >
+                <div
+                  class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-white">
+                      Full Stack Developer Intern
+                    </h3>
+                    <p class="text-accent font-medium">
+                      Prudential Solutions (Pvt.) Limited, Islamabad
+                    </p>
+                  </div>
+                  <span
+                    class="mt-2 md:mt-0 px-4 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium"
+                    >Nov 2025 – Feb 2026</span
+                  >
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-check-circle text-accent mt-1 text-xs"></i
+                    ><span
+                      >Worked in the IT department focusing on full-stack web
+                      development projects.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-check-circle text-accent mt-1 text-xs"></i
+                    ><span
+                      >Designed and developed responsive and user-friendly web
+                      interfaces.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-check-circle text-accent mt-1 text-xs"></i
+                    ><span
+                      >Collaborated with the development team on real-world
+                      applications and business solutions.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-check-circle text-accent mt-1 text-xs"></i
+                    ><span
+                      >Improved UI/UX for better user engagement and
+                      performance.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-check-circle text-accent mt-1 text-xs"></i
+                    ><span
+                      >Gained hands-on experience in modern web technologies and
+                      development workflows.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fas fa-check-circle text-accent mt-1 text-xs"></i
+                    ><span
+                      >Demonstrated strong learning ability, adaptability, and
+                      professional work ethic.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div
+              class="relative pl-8 md:pl-12 timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              <div
+                class="glass rounded-xl p-6 border border-gray-700 hover:border-accentGold/50 transition-colors"
+              >
+                <div
+                  class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-white">
+                      WordPress Developer Intern / Freelance E-Commerce
+                      Developer
+                    </h3>
+                    <p class="text-accentGold font-medium">
+                      NorthStar Blades (Personal Project / Freelance), Azad
+                      Kashmir
+                    </p>
+                  </div>
+                  <span
+                    class="mt-2 md:mt-0 px-4 py-1 bg-accentGold/20 text-accentGold rounded-full text-sm font-medium"
+                    >Feb 2025 – June 2025</span
+                  >
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fas fa-check-circle text-accentGold mt-1 text-xs"
+                    ></i
+                    ><span
+                      >Designed and launched a fully functional e-commerce
+                      website using WordPress, WooCommerce, and custom
+                      themes/plugins.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fas fa-check-circle text-accentGold mt-1 text-xs"
+                    ></i
+                    ><span
+                      >Integrated payment gateways, inventory management, and
+                      order tracking features.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fas fa-check-circle text-accentGold mt-1 text-xs"
+                    ></i
+                    ><span
+                      >Customized themes for a professional, user-friendly, and
+                      responsive design.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fas fa-check-circle text-accentGold mt-1 text-xs"
+                    ></i
+                    ><span
+                      >Optimized the site for SEO, performance, and security,
+                      ensuring a reliable platform.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fas fa-check-circle text-accentGold mt-1 text-xs"
+                    ></i
+                    ><span
+                      >Managed end-to-end deployment, updates, and
+                      troubleshooting, gaining practical experience in WordPress
+                      and web development.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div
+              class="relative pl-8 md:pl-12 timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <div
+                class="glass rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-colors"
+              >
+                <div
+                  class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-white">
+                      Frontend Developer Intern
+                    </h3>
+                    <p class="text-blue-400 font-medium">
+                      AJK Information Technology Board
+                    </p>
+                  </div>
+                  <span
+                    class="mt-2 md:mt-0 px-4 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium"
+                    >Previous</span
+                  >
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fas fa-check-circle text-blue-400 mt-1 text-xs"
+                    ></i
+                    ><span
+                      >Developed and maintained responsive web interfaces for
+                      government-related platforms.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fas fa-check-circle text-blue-400 mt-1 text-xs"
+                    ></i
+                    ><span
+                      >Focused on improving user experience and
+                      accessibility.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fas fa-check-circle text-blue-400 mt-1 text-xs"
+                    ></i
+                    ><span
+                      >Worked with real-world systems and contributed to
+                      production-level projects.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fas fa-check-circle text-blue-400 mt-1 text-xs"
+                    ></i
+                    ><span
+                      >Collaborated with team members to implement UI features
+                      and enhancements.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Education -->
+            <div
+              class="relative pl-8 md:pl-12 timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="300"
+            >
+              <div
+                class="glass rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-colors"
+              >
+                <div
+                  class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-white">
+                      BS Computer Science
+                    </h3>
+                    <p class="text-purple-400 font-medium">
+                      University of Azad Jammu and Kashmir
+                    </p>
+                  </div>
+                  <span
+                    class="mt-2 md:mt-0 px-4 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-medium"
+                    >8th Semester</span
+                  >
+                </div>
+                <p class="text-gray-300 text-sm">
+                  Currently pursuing Bachelor's degree with focus on Software
+                  Engineering, AI, and Cybersecurity.
+                </p>
+              </div>
+            </div>
+
+            <!-- Certification Item -->
+            <div
+              class="relative pl-8 md:pl-12 timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="400"
+            >
+              <div
+                class="glass rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-colors"
+              >
+                <div class="flex items-center gap-4 mb-4">
+                  <div
+                    class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center"
+                  >
+                    <i class="fas fa-shield-alt text-red-500 text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-white">
+                      Certified Ethical Hacker (CEH)
+                    </h3>
+                    <p class="text-gray-400 text-sm">EC-Council</p>
+                  </div>
+                </div>
+                <p class="text-gray-300 text-sm">
+                  Professional certification in ethical hacking and
+                  cybersecurity, providing expertise in security assessment,
+                  penetration testing, and secure coding practices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Featured <span class="gradient-text">Projects</span>
+          </h2>
+          <p class="text-gray-400">
+            Some of my recent work and final year projects
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="project-card glass rounded-2xl overflow-hidden border border-gray-700 group"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-blue-600 to-purple-600 relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs text-white border border-white/30"
+                  >E-Commerce</span
+                >
+              </div>
+              <i
+                class="fas fa-shopping-cart absolute top-4 right-4 text-4xl text-white/20"
+              ></i>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors"
+              >
+                NorthStar Blades
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                A full-featured e-commerce website built on WordPress with
+                modern UI design, product management system, and complete
+                checkout functionality.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-xs"
+                  >WordPress</span
+                ><span
+                  class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs"
+                  >WooCommerce</span
+                ><span
+                  class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded text-xs"
+                  >UI/UX</span
+                >
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-accent hover:text-accentGold transition-colors text-sm font-medium"
+                ><span>View Project</span
+                ><i class="fas fa-external-link-alt text-xs"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass rounded-2xl overflow-hidden border border-gray-700 group"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-emerald-600 to-teal-600 relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs text-white border border-white/30"
+                  >FYP - AI/Flutter</span
+                >
+              </div>
+              <i
+                class="fas fa-bolt absolute top-4 right-4 text-4xl text-white/20"
+              ></i>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors"
+              >
+                Smart Disaster Management
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Final Year Project featuring a Flutter-based mobile app with AI
+                integration. Role-based system for volunteers, donors, victims,
+                and rescue teams with real-time coordination.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-xs"
+                  >Flutter</span
+                ><span
+                  class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs"
+                  >AI/ML</span
+                ><span
+                  class="px-2 py-1 bg-orange-500/20 text-orange-400 rounded text-xs"
+                  >Firebase</span
+                >
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-accent hover:text-accentGold transition-colors text-sm font-medium"
+                ><span>View Details</span
+                ><i class="fas fa-external-link-alt text-xs"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass rounded-2xl overflow-hidden border border-gray-700 group"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-green-600 to-emerald-800 relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs text-white border border-white/30"
+                  >AI/ML</span
+                >
+              </div>
+              <i
+                class="fas fa-seedling absolute top-4 right-4 text-4xl text-white/20"
+              ></i>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors"
+              >
+                Smart Agriculture System
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                AI-based project using machine learning to help farmers optimize
+                crop production through predictive analysis and data-driven
+                decision making.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded text-xs"
+                  >Python</span
+                ><span
+                  class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-xs"
+                  >TensorFlow</span
+                ><span
+                  class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs"
+                  >Data Science</span
+                >
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-accent hover:text-accentGold transition-colors text-sm font-medium"
+                ><span>Learn More</span
+                ><i class="fas fa-external-link-alt text-xs"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-secondary/30">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Technical <span class="gradient-text">Skills</span>
+          </h2>
+          <p class="text-gray-400">Technologies and tools I work with</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="glass rounded-2xl p-6 border border-gray-700 hover:border-accent/50 transition-colors"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center"
+              >
+                <i class="fas fa-laptop-code text-2xl text-blue-400"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Frontend</h3>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-blue-400 hover:text-blue-400 cursor-default"
+                ><i class="fab fa-html5 mr-2"></i>HTML5</span
+              ><span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-blue-400 hover:text-blue-400 cursor-default"
+                ><i class="fab fa-css3-alt mr-2"></i>CSS3</span
+              ><span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-yellow-400 hover:text-yellow-400 cursor-default"
+                ><i class="fab fa-js mr-2"></i>JavaScript</span
+              ><span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-purple-400 hover:text-purple-400 cursor-default"
+                ><i class="fab fa-bootstrap mr-2"></i>Bootstrap</span
+              >
+              <span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-blue-400 hover:text-blue-400 cursor-default"
+                ><i class="fab fa-react mr-2"></i>React</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="glass rounded-2xl p-6 border border-gray-700 hover:border-accent/50 transition-colors"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center"
+              >
+                <i class="fas fa-server text-2xl text-green-400"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Backend</h3>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-green-400 hover:text-green-400 cursor-default"
+                ><i class="fab fa-node mr-2"></i>Node.js</span
+              ><span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-gray-400 hover:text-white cursor-default"
+                ><i class="fas fa-database mr-2"></i>Express</span
+              ><span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-green-400 hover:text-green-400 cursor-default"
+                ><i class="fas fa-leaf mr-2"></i>MongoDB</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="glass rounded-2xl p-6 border border-gray-700 hover:border-accent/50 transition-colors"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center"
+              >
+                <i class="fas fa-tools text-2xl text-purple-400"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Tools & Others</h3>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-blue-400 hover:text-blue-400 cursor-default"
+                ><i class="fab fa-wordpress mr-2"></i>WordPress</span
+              ><span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-blue-400 hover:text-blue-400 cursor-default"
+                ><i class="fas fa-mobile-alt mr-2"></i>Flutter</span
+              ><span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-red-400 hover:text-red-400 cursor-default"
+                ><i class="fas fa-shield-alt mr-2"></i>Cybersecurity</span
+              ><span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-yellow-400 hover:text-yellow-400 cursor-default"
+                ><i class="fas fa-brain mr-2"></i>AI/ML</span
+              ><span
+                class="skill-badge px-4 py-2 bg-gray-800 rounded-lg text-gray-300 text-sm border border-gray-700 hover:border-orange-400 hover:text-orange-400 cursor-default"
+                ><i class="fab fa-git-alt mr-2"></i>Git</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-transparent to-accent/5"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div
+          class="max-w-4xl mx-auto glass rounded-3xl p-8 md:p-12 border border-gray-700"
+          data-aos="fade-up"
+        >
+          <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              Let's Work <span class="gradient-text">Together</span>
+            </h2>
+            <p class="text-gray-400">
+              Have a project in mind? Let's build something amazing.
+            </p>
+          </div>
+          <div class="flex flex-col items-center space-y-8">
+            <div class="flex justify-center gap-6">
+              <a
+                href="https://wa.me/923155311543"
+                target="_blank"
+                class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all transform hover:scale-110 shadow-lg shadow-green-500/20 group"
+                title="WhatsApp"
+                ><i
+                  class="fab fa-whatsapp text-2xl group-hover:scale-110 transition-transform"
+                ></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/syed-fakhir-ejaz-44577433b"
+                target="_blank"
+                class="w-16 h-16 rounded-full bg-[#0077b5]/20 flex items-center justify-center text-[#0077b5] hover:bg-[#0077b5] hover:text-white transition-all transform hover:scale-110 shadow-lg shadow-[#0077b5]/20 group"
+                title="LinkedIn"
+                ><i
+                  class="fab fa-linkedin-in text-2xl group-hover:scale-110 transition-transform"
+                ></i
+              ></a>
+              <a
+                href="https://github.com/Techguru72/"
+                target="_blank"
+                class="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-gray-600 transition-all transform hover:scale-110 shadow-lg shadow-gray-500/20 group"
+                title="GitHub"
+                ><i
+                  class="fab fa-github text-2xl group-hover:scale-110 transition-transform"
+                ></i
+              ></a>
+              <a
+                href="mailto:syedfakhirejaz@gmail.com"
+                class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-all transform hover:scale-110 shadow-lg shadow-accent/20 group"
+                title="Email"
+                ><i
+                  class="fas fa-envelope text-2xl group-hover:scale-110 transition-transform pointer-events-auto"
+                ></i
+              ></a>
+            </div>
+            <div class="w-full max-w-md space-y-4">
+              <a
+                href="https://wa.me/923155311543"
+                target="_blank"
+                class="w-full py-4 bg-green-500 text-white rounded-xl font-semibold hover:bg-green-600 transition-all transform hover:scale-[1.02] shadow-lg shadow-green-500/30 text-center flex items-center justify-center gap-2 group"
+                ><i class="fab fa-whatsapp text-xl"></i
+                ><span>Message on WhatsApp</span></a
+              >
+              <a
+                href="/portfolio/assets/SyedFakhirEjazResume (3) (1).pdf"
+                class="w-full py-4 border-2 border-accentGold text-accentGold rounded-xl font-semibold hover:bg-accentGold hover:text-primary transition-all text-center flex items-center justify-center gap-2"
+                ><i class="fas fa-download"></i><span>Download CV</span></a
+              >
+            </div>
+            <p class="text-center text-white-500 text-md">
+              Available for freelance projects and full-time opportunities
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800 bg-secondary/30">
+      <div class="container mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <div class="text-center md:text-left">
+            <p class="text-gray-400 text-sm">
+              © 2026 Syed Fakhir Ejaz. All rights reserved.
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <a
+              href="https://wa.me/923155311543"
+              target="_blank"
+              class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/syed-fakhir-ejaz-44577433b"
+              target="_blank"
+              class="w-10 h-10 rounded-full bg-[#0077b5]/20 flex items-center justify-center text-[#0077b5] hover:bg-[#0077b5] hover:text-white transition-all"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/Techguru72/"
+              target="_blank"
+              class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-gray-600 transition-all"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="mailto:syedfakhirejaz@gmail.com"
+              class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-all"
+              ><i class="fas fa-envelope pointer-events-auto"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
